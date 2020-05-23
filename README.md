@@ -1,5 +1,5 @@
 # tribute-page
-A tribute page dedicated to Vincent Van Gogh for my first challenge in FreeCodeCamp!
+A tribute page dedicated to Vincent Van Gogh for my first challenge in FreeCodeCamp!\n
 Responsive Web Design Certification - Project: Build a tribute page.
 You can see the webpage at https://codepen.io/sfoteini/pen/rNOQyQg
 
