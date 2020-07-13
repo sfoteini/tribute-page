@@ -1,27 +1,25 @@
 html {
   font-size: 10px;
-  --dark-blue: #1e2042;
-  --light-grey: #f9f8fb;
 }
 
 body {
-  font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-family: Lato, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   margin: 0;
+  background-color: #fbfaf8;
+  color: #37383a;
 }
-
-/********** General *********************/
 
 h1 {
   font-size: 6rem;
-  font-family: Lato, serif;
-  color: #1e2042;
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
 }
 
 #subheader {
   font-weight: 300;
-  color: #d5a33c;
+  color: #948C57;
   text-transform: uppercase;
 }
 
@@ -33,16 +31,17 @@ h1 {
 
 h2 {
   font-size: 3rem;
-  color: var(--dark-blue, #1e2042);
+  font-family: "Libre Baskerville", serif;
   text-align: center;
-  padding-bottom: 1.2rem;
+  padding-bottom: 5rem;
 }
 
 blockquote {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-style: italic;
-  font-family: Lato, serif;
+  font-family: "Libre Baskerville", serif;
   text-align: center;
+  margin-bottom: 5rem;
 }
 
 ul {
@@ -53,7 +52,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--dark-blue, #1e2042);
 }
 
 a:hover {
@@ -61,45 +59,56 @@ a:hover {
 }
 
 a:visited {
-  color: #336c78;
+  color: #948C57;
 }
 
 #tribute-link {
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--light-gery, #f9f8fb);
+  color: #fefefe;
   text-transform: uppercase;
 }
 
 #tribute-link:visited {
-  color: var(--light-gery, #f9f8fb);
+  color: #fefefe;
 }
 
 #tribute-link:hover {
   text-decoration: none;
-  color: #cedbe0;
 }
 
 #tribute-link-dash {
   text-decoration: none;
-  border-bottom: 0.4rem solid var(--light-gery, #f9f8fb);
-  padding-bottom: 0.5rem;
 }
 
 #tribute-link:hover #tribute-link-dash {
-  border-bottom: 0.4rem solid #cedbe0;
+  animation-name: tribute-link-dash-move;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
-/********** Images ********************/
+@keyframes tribute-link-dash-move {
+    0% {
+      border-bottom: 0.4rem solid rgba(254, 254, 254, 0);
+      padding-bottom: 0.6rem;
+    }
+    100% {
+      border-bottom: 0.4rem solid rgba(254, 254, 254, 1);
+      padding-bottom: 0.6rem;
+    }
+}
+
+/* Images */
 
 img {
   max-width: 100%;
   height: auto;
   display: block;
-  box-shadow: 0 1rem 1rem -0.7rem rgba(13, 20, 64, 0.2);
+  box-shadow: 0 1rem 1rem -0.7rem rgba(55, 56, 58, 0.3);
 }
 
-/********* Gallery ************************/
+/* Gallery */
 
 .gallery-grid {
   display: grid;
@@ -119,22 +128,23 @@ img {
   position: relative;
 }
 
-.caption {
-  opacity: 0;
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+.caption{
+  padding-top: 1.2rem;
+  line-height: 0.5;
+  font-family: "Libre Baskerville", serif;
 }
 
-figure:hover .caption {
-  opacity: 1;
+.date-caption {
+  font-size: 1rem;
+  font-style: italic;
 }
 
-/********** First row columns **************/
+.name-caption {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* First row columns */
 
 .column-header {
   float: left;
@@ -164,64 +174,41 @@ figure:hover .caption {
   }
 }
 
-/******** Rows ***********************/
+/* Sections */
 
 .first-row {
-  padding: 10vh 5rem 20vh 5rem;
+  padding: 5rem 5rem 10rem 5rem;
   top: 0;
-  min-height: 90vh;
 }
 
 .second-row {
-  background-color: var(--light-grey, #f9f8fb);
-  color: var(--dark-blue, #1e2042);
-  padding: 4rem;
+  color: #37383a;
+  padding: 0 4rem 4rem 4rem;
   position: relative;
-}
-
-.second-row:before {
-  content: " ";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background-color: var(--light-grey, #f9f8fb);
-  transform-origin: top right;
-  transform: skewY(4deg);
+  margin-bottom: 5rem;
 }
 
 .third-row {
-  background-color: var(--dark-blue, #1e2042);
-  color: var(--light-grey, #f9f8fb);
-  padding: 4rem;
+  background-color: #37383a;
+  color: #fefefe;
+  padding: 5rem;
   text-align: center;
 }
 
 .fourth-row {
-  padding: 4rem;
-  color: var(--dark-blue, #1e2042);
+  padding: 4rem 4rem 2rem 4rem;
+  margin-top: 4rem;
 }
 
 .fifth-row {
-  background: repeating-linear-gradient(
-    -45deg,
-    #f0eff1,
-    #f9f8fb 3px,
-    #f0eff1 3px,
-    #f9f8fb 8px
-  );
-  color: var(--dark-blue, #1e2042);
   padding: 4rem;
   text-align: center;
 }
 
 .footer {
-  background-color: var(--dark-blue, #1e2042);
-  color: var(--light-grey, #f9f8fb);
-  padding: 0.1rem;
+  background-color: #37383a;
+  color: #fefefe;
+  padding: 0.2rem;
   text-align: center;
 }
 
