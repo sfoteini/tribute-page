@@ -151,7 +151,7 @@ img {
 
 .column-header {
   float: left;
-  width: 60%;
+  width: 65%;
   padding: 2.5%;
   box-sizing: border-box;
 }
@@ -159,7 +159,7 @@ img {
 .column-image {
   float: left;
   padding: 2.5%;
-  width: 30%;
+  width: 35%;
   box-sizing: border-box;
 }
 
