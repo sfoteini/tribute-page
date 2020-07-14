@@ -67,6 +67,7 @@ a:visited {
   font-weight: 500;
   color: #fefefe;
   text-transform: uppercase;
+  line-height: 2;
 }
 
 #tribute-link:visited {
@@ -130,13 +131,14 @@ img {
 
 .caption{
   padding-top: 1.2rem;
-  line-height: 0.5;
   font-family: "Libre Baskerville", serif;
 }
 
 .date-caption {
   font-size: 1rem;
   font-style: italic;
+  position: relative;
+  top: -1rem;
 }
 
 .name-caption {
@@ -183,7 +185,7 @@ img {
 
 .second-row {
   color: #37383a;
-  padding: 0 4rem 4rem 4rem;
+  padding: 0 5rem 4rem 5rem;
   position: relative;
   margin-bottom: 5rem;
 }
@@ -196,7 +198,7 @@ img {
 }
 
 .fourth-row {
-  padding: 4rem 4rem 2rem 4rem;
+  padding: 4rem 5rem 2rem 5rem;
   margin-top: 4rem;
 }
 
@@ -213,6 +215,6 @@ img {
 }
 
 #second-row-container {
-  width: 85%;
   margin: 0 auto;
+  padding: 2.5%;
 }
